@@ -1,2 +1,2 @@
 # kittensgame-autocat
-Automation options for something something cat game
+Automation options something something cat game
