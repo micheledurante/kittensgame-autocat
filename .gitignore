@@ -1,0 +1,12 @@
+# IDE
+.vscode/
+
+# Build
+dist/*
+!dist/.gitkeep
+
+# tmp
+*.idlk
+
+# NPM
+node_modules/

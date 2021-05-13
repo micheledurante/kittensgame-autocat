@@ -1,0 +1,19 @@
+{
+    "include": [
+        "src/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "kitten-game",
+        "visuals"
+    ],
+    "compilerOptions": {
+        "allowJs": true,
+        "outFile": "./dist/autocat.js",
+        "target": "es5",
+        "strict": true,
+        "noUnusedLocals": true,
+        "removeComments": true,
+        "alwaysStrict": true
+    }
+}

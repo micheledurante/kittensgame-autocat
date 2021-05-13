@@ -1,0 +1,27 @@
+{
+  "name": "kittensgame-autocat",
+  "version": "1.0.0",
+  "description": "Something something automation options cat game",
+  "main": "./dist/autocat.js",
+  "scripts": {
+    "tsc": "tsc",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micheledurante/kittensgame-autocat.git"
+  },
+  "keywords": [
+    "kittensgame",
+    "KG"
+  ],
+  "author": "micheled",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/micheledurante/kittensgame-autocat/issues"
+  },
+  "homepage": "https://github.com/micheledurante/kittensgame-autocat#readme",
+  "devDependencies": {
+    "eslint": "^7.26.0"
+  }
+}
