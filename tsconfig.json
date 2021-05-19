@@ -1,4 +1,7 @@
 {
+    "include": [
+        "src/**/*.ts" // required here but will be overridden in debug/release.tsconfig.json
+    ],
     "exclude": [
         "node_modules",
         "kitten-game",

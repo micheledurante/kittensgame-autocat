@@ -4,8 +4,9 @@
   "description": "Something something automation options cat game",
   "main": "./dist/autocat.js",
   "scripts": {
-    "release": "tsc --project tsconfig.release.json",
-    "debug": "rm -rf dist/ && tsc --project tsconfig.debug.json",
+    "clean": "rm -rf dist/",
+    "release": "npm run clean && tsc --project tsconfig.release.json",
+    "debug": "npm run clean && tsc --project tsconfig.debug.json",
     "test": "npm run debug && jest"
   },
   "repository": {

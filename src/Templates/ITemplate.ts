@@ -1,5 +1,5 @@
 namespace Templates {
-    export interface TemplateInterface {
+    export interface ITemplate {
 
         /**
          * Return the HTML string for the templates

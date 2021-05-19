@@ -18,7 +18,8 @@ To setup
 
 ---
 
-To remember
-1. Manually add imports for each TS file here `src/debug.ts`
+Remember
+1. The `src` app uses TypeScript's namespaced, path reference [imports](https://www.typescriptlang.org/docs/handbook/namespaces.html#splitting-across-files). Stick to it
+1. Manually add imports for each .ts file here `src/debug.ts`
 1. Tests are witten in JS. They depend on the compiled TS -> JS out file, expected in `dist/autocat.js`
-1. Import the whole app CommonJS style `const autocat = require('../dist/autocat');` and use its modules `autocat.Templates...`
+1. In tests, require the whole `src` app, CommonJS style `const autocat = require('../dist/autocat');` and use its namespaces like `autocat.Templates...`

@@ -1,10 +1,10 @@
 namespace Application {
-    export interface ApplicationInterface {
+    export interface IApplication {
         TIMEOUT: number;
         TAB_DIV_ID: string;
         TAB_DIV_CLASS: string;
 
-        addAutoCatTab(): void;
+        appendAutocatTab(): void;
         createUi(): void;
         run(): void;
     }

@@ -2,7 +2,9 @@
  * Entry point for the release app.
  */
 /// <reference path="Application/Autocat.ts" />
-/// <reference path="Templates/AutocatTab.ts" />
+/// <reference path="KittensGame/Types/IGamePage.ts"/>
 
-var autocat = new Application.Autocat(window.document, new Templates.AutocatTab());
+declare var gamePage: KittensGame.Types.IGamePage;
+
+var autocat = new Application.Autocat(gamePage);
 autocat.createUi();

@@ -1,43 +1,38 @@
-/// <reference path="../Templates/TemplateInterface.ts" />
+/// <reference path="../Templates/ITemplate.ts" />
+/// <reference path="../Templates/AutocatTab.ts" />
+/// <reference path="../KittensGame/Types/IGamePage.ts" />
+/// <reference path="./Managers/AutocatManager.ts" />
 
 namespace Application {
-    export class Autocat implements ApplicationInterface {
+    export class Autocat implements IApplication {
         public TIMEOUT: number = 1000;
         public TAB_DIV_ID: string = 'gameContainerId';
         public TAB_DIV_CLASS: string = 'tabsContainer';
 
-        private document: Document;
-        private autoCatTab: Templates.TemplateInterface;
+        private autoCatTab: Templates.ITemplate;
+        private gamePage: KittensGame.Types.IGamePage;
 
-        public constructor(document: Document, autoCatTab: Templates.TemplateInterface) {
-            this.document = document;
-            this.autoCatTab = autoCatTab;
+        public constructor(gamePage: KittensGame.Types.IGamePage) {
+            this.autoCatTab = new Templates.AutocatTab();
+            this.gamePage = gamePage;
         }
         
         /**
-         * Create a tab entry for configuring autocat
+         * Append an entry for configuring autocat to the main tabbed menu
          */
-        public addAutoCatTab(): void {
-            const gameContainerId = this.document.getElementById(this.TAB_DIV_ID);
-
-            if (gameContainerId === null) {
-                return;
-            }
-
-            const tabsContainer = gameContainerId.getElementsByClassName(this.TAB_DIV_CLASS)[0];
-
-            if (!tabsContainer) {
-                return;
-            }
-
-            tabsContainer.innerHTML = tabsContainer.innerHTML + this.autoCatTab.getHtml();
+        public appendAutocatTab(): void {
+            // tabsContainer.innerHTML = tabsContainer.innerHTML + this.autoCatTab.getHtml();
+            this.autoCatTab.getHtml();
+            
+            const autocatManager = new Managers.AutocatManager(this.gamePage);
+            this.gamePage.managers.push(autocatManager);
         }
 
         /**
          * Create the UI for autocat
          */
         public createUi(): void {
-            this.addAutoCatTab();
+            this.appendAutocatTab();
         }
 
         /**

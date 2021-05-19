@@ -1,3 +1,4 @@
+'use strict';
 const autocat = require('../../dist/autocat');
 
 describe('AutocatTab', function () {
