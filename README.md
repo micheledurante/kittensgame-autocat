@@ -1,6 +1,8 @@
 # WIP: kittensgame-autocat
 Something something automation [cat game](https://kittensgame.com/web/)
 
+[![Build Status](https://travis-ci.com/micheledurante/kittensgame-autocat.svg?branch=main)](https://travis-ci.com/micheledurante/kittensgame-autocat)
+
 New Autocat tab
 
 You can set
