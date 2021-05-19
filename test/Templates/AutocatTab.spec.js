@@ -1,4 +1,4 @@
-const autocat = require('../dist/autocat');
+const autocat = require('../../dist/autocat');
 
 describe('AutocatTab', function () {
     describe('getHtml()', function () {

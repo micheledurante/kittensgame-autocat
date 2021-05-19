@@ -1,7 +1,4 @@
 {
-    "include": [
-        "src/**/*.ts"
-    ],
     "exclude": [
         "node_modules",
         "kitten-game",
@@ -12,6 +9,9 @@
         "outFile": "./dist/autocat.js",
         "target": "es5",
         "strict": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
         "noUnusedLocals": true,
         "removeComments": true,
         "alwaysStrict": true

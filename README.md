@@ -13,3 +13,10 @@ To setup
 1. `git submodule update --init --recursive`
 1. `npm i`
 1. `npm run test`
+
+---
+
+To remember
+1. Manually add imports for each TS file here `src/debug.ts`
+1. Tests are witten in JS. They depend on the compiled TS -> JS out file, expected in `dist/autocat.js`
+1. Import the whole app CommonJS style `const autocat = require('../dist/autocat');` and use its modules `autocat.Templates...`
