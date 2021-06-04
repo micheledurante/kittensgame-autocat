@@ -10,7 +10,8 @@ before_install:
     - curl -fsSL https://deno.land/x/install/install.sh | sh
     - export DENO_INSTALL="$HOME/.deno"
     - export PATH="$DENO_INSTALL/bin:$PATH"
-    - deno run https://deno.land/std/examples/welcome.ts   
+    - deno run https://deno.land/std/examples/welcome.ts
+    - chmod +x ./build.sh
 
 script:
     - ./build.sh
