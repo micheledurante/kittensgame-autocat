@@ -1,5 +1,3 @@
-namespace KittensGame.Types {
-    export interface IUi {
-        activeTabId: string;
-    }
+export interface IUi {
+  activeTabId: string;
 }

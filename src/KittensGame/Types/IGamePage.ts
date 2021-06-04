@@ -1,11 +1,8 @@
-/// <reference path="./IUi.ts" />
-/// <reference path="./Managers/IManager.ts" />
+import { IUi } from "./IUi.ts";
+import { IManager } from "./Managers/IManager.ts";
 
-namespace KittensGame.Types {
-    export interface IGamePage {
-        ui: IUi;
-        managers: Managers.IManager[];
-
-        togglePause(): void;
-    }
+export interface IGamePage {
+  ui: IUi;
+  managers: IManager[];
+  togglePause(): void;
 }

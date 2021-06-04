@@ -1,11 +1,16 @@
-language: node_js
+language: default
 
-node_js:
-  - 14
-  - 16
+os: ubuntu
 
-install:
-  - npm install ci
+services:
+    - docker
+
+before_install:
+    - pwd
+    - curl -fsSL https://deno.land/x/install/install.sh | sh
+    - export DENO_INSTALL="$HOME/.deno"
+    - export PATH="$DENO_INSTALL/bin:$PATH"
+    - deno run https://deno.land/std/examples/welcome.ts   
 
 script:
-  - npm test
+    - ./build.sh

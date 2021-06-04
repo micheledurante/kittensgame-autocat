@@ -1,12 +1,5 @@
-# IDE
-.vscode/
+# Auto-generated
+deno.runtime.d.ts
 
 # Build
 dist/*
-!dist/.gitkeep
-
-# tmp
-*.idlk
-
-# NPM
-node_modules/

@@ -1,5 +1,5 @@
-namespace KittensGame.Types.Managers {
-    export interface IManager {
-        game: KittensGame.Types.IGamePage;
-    }
+import { IGamePage } from "../IGamePage.ts";
+
+export interface IManager {
+  game: IGamePage;
 }

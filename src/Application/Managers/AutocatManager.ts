@@ -1,12 +1,10 @@
-/// <reference path="./IAutocatManager.ts" />
-/// <reference path="../../KittensGame/Types/IGamePage.ts" />
+import { IGamePage } from "../../KittensGame/Types/IGamePage.ts";
+import { IManager } from "../../KittensGame/Types/Managers/IManager.ts";
 
-namespace Application.Managers {
-    export class AutocatManager implements IAutocatManager {
-        game: KittensGame.Types.IGamePage;
+export class AutocatManager implements IManager {
+  game: IGamePage;
 
-        public constructor(gamePage: KittensGame.Types.IGamePage) {
-            this.game = gamePage;
-        }
-    }
+  public constructor(gamePage: IGamePage) {
+    this.game = gamePage;
+  }
 }

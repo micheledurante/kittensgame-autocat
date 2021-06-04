@@ -1,0 +1,9 @@
+{
+    "deno.lint": false,
+    "deno.unstable": false,
+    "search.exclude": {
+        "dist/*": true,
+        "kitten-game/**/*": true
+    },
+    "deno.enable": true
+}
