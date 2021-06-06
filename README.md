@@ -1,7 +1,8 @@
-# WIP: kittensgame-autocat
-Something something automation [cat game](https://kittensgame.com/web/)
 
+# WIP: kittensgame-autocat
 [![Build Status](https://travis-ci.com/micheledurante/kittensgame-autocat.svg?branch=main)](https://travis-ci.com/micheledurante/kittensgame-autocat)
+
+Something something automation [cat game](https://kittensgame.com/web/)
 
 New Autocat tab
 
@@ -9,9 +10,9 @@ You can set
 1. Astronomical events: auto-observe on/off (if not automated already)
 1. Hunts: send all hunts as soon as the set catpower limit is reached (steps of 100)
 
-Written in TypeScript 4 and built with the amazing [Deno](https://deno.land/).
+Written in TypeScript and built with the amazing [Deno](https://deno.land/).
 
-## Setup
+### Setup
 `deno` executable is expected to be [installed globally](https://deno.land/#installation). Developed with VS Code using the [Deno extension](https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno).
 
 - Checkout the repository and its submodule `git submodule update --init --recursive`
@@ -21,7 +22,7 @@ Written in TypeScript 4 and built with the amazing [Deno](https://deno.land/).
 - Restore test deps `deno cache --reload --lock=./test/lock.json ./test/deps.ts`
 - Run `./test.ps1`
 
-## Dependency management (no NPM)
+### Dependency management (no NPM)
 Some functionality must be handled manually, compared to NPM.
 
 Define all runtime dependencies in `src/deps.ts` and dev dependencies in `test/deps.ts` as ES6 exports as we don't have a `package.json` to define this.
@@ -38,15 +39,20 @@ Refresh cached dependencies (when the source might have changed, unlikely I gues
 - Refresh runtime dependencies `deno cache --reload ./src/deps.ts`
 - Refresh dev dependencies `deno cache --reload ./test/deps.ts`
 
-## Scripts
+### Scripts
 Based on Rust naming conventions:
 - `check.ps1` Format and lint the project (fmt & check)
 - `test.ps1` Test the program (check + test)
 - `run.ps1` Run the program (check + run)
 - `build.ps1` Build for release into `./dist/autocat.js` (test + bundle)
 
-## CI
+### CI
 `./build.sh` can be used to build Autocat in linux environments, otherwise run `.\build.ps1` for Windows.
+
+### How to Release
+1. If not present already, create a new section for the `[Upcoming]` release in `CHANGELOG.md`
+1. Replace `[Upcoming]` from the current release with the today's date using the format `[YYYY-MM-DD]`
+1. Bump up the version in `./build.ps1` and `./build.sh`
 
 ## Gotchas!
 Remember:
