@@ -1,7 +1,13 @@
 import { IGamePage } from "./KittensGame/Types/IGamePage.ts";
-import { Autocat } from "./Application/Autocat.ts";
+import { Application } from "./Application/Application.ts";
+import { Document } from "./deps.ts";
 
-declare var gamePage: IGamePage;
+declare var gamePage: IGamePage; // This is the global that at runtime holds the complete game
+declare var document: Document;
 
-var autocat = new Autocat(gamePage);
-autocat.createUi();
+if (typeof gamePage === "undefined" || !gamePage) {
+  alert("Autocat: KittensGame is not correctly initialised. Load it again");
+} else {
+  const application = new Application(gamePage, document);
+  application.createUi();
+}
